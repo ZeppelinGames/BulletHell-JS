@@ -1,0 +1,35 @@
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+    body {
+        margin:0;
+        background: black;
+    }
+    h2 {
+        font: arial;
+        color: white;
+    }
+    
+    .nocursor {
+        cursor : none
+    }
+</style>
+
+<div id="n">
+<div class="fixed inset-0 flex items-center justify-center">
+    <p class ="select-none text-black text-opacity-50 font-sans font-bold text-middle" id="scoreText" style="font-size:1500%">0</p>
+</div>
+
+<div class="fixed inset-0 flex items-center justify-center" id="startPanel">
+    <div class="bg-black max-w-md w-full p-6 text-center text-white rounded-lg">
+        <h1 class="text-4xl font-bold leading-none" id="pointsPanelText">0</h1>
+        <p class="text-sm text-gray-500 mb-4">Points</p>
+        <div><button class="bg-blue-500 w-full py-3 rounded-full" id="startButton">Start Game</button></div>
+    </div>
+</div>
+</div>
+
+<canvas style="background-color: black" id="nocursor"></canvas>
+<script src='./index.js'> </script>
+
+
