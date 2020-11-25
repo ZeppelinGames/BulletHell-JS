@@ -102,7 +102,8 @@ function collision (p1x, p1y, r1, p2x, p2y, r2) {
     }
 }
 
-const gameUI = new GameUI(canvas.width/2,canvas.height/2,canvas.height/2, 'white')
+circleSize = (canvas.height/2)
+gameUI = new GameUI(canvas.width/2,canvas.height/2,circleSize, 'white')
 gameUI.Draw()
 spawnInterval = 250
 
@@ -127,12 +128,20 @@ function Animate() {
     c.fillRect(0,0,canvas.width,canvas.height)
     //c.clearRect(0,0,canvas.width,canvas.height)
     
+    if(score > 0) {
+    if(score % 100 == 0) {
+        if(circleSize > 100) {
+        circleSize = circleSize * 0.95
+        }
+    }
+    }
+    gameUI.radius = circleSize
     gameUI.Draw()
     
     player.Update()
     
     bullets.forEach(bullet =>    {
-        if(collision(bullet.x,bullet.y,bullet.radius, canvas.width/2,canvas.height/2,canvas.height/2 +1) == false) 
+        if(collision(bullet.x,bullet.y,bullet.radius, canvas.width/2,canvas.height/2,circleSize + 1) == false) 
         {
             bullets.splice(bullets.indexOf(bullet),bullets.indexOf(bullet)+1)  
             score++
