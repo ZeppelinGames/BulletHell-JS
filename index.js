@@ -195,8 +195,8 @@ function spawnEnemy() {
         
         randomAngle = Math.random() * 360
         const pos = {
-            x: (Math.sin(randomAngle) * (circleSize) + canvas.width/2,
-            y: (Math.cos(randomAngle) * (circleSize) + canvas.height/2 
+            x: (Math.sin(randomAngle) * (circleSize)) + canvas.width/2,
+            y: (Math.cos(randomAngle) * (circleSize)) + canvas.height/2 
         }
         
         //GET ANGLE TO PLAYER
