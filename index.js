@@ -195,8 +195,8 @@ function spawnEnemy() {
         
         randomAngle = Math.random() * 360
         const pos = {
-            x: (Math.sin(randomAngle) * (canvas.height/2)) + canvas.width/2,
-            y: (Math.cos(randomAngle) * (canvas.height/2)) + canvas.height/2 
+            x: (Math.sin(randomAngle) * (circleSize) + canvas.width/2,
+            y: (Math.cos(randomAngle) * (circleSize) + canvas.height/2 
         }
         
         //GET ANGLE TO PLAYER
@@ -231,7 +231,7 @@ function spawnEnemies() {
 
 onmousemove = function(e){
     if(collision(e.clientX,e.clientY,50,
-                 canvas.width/2,canvas.height/2,canvas.height/2-50)) 
+                 canvas.width/2,canvas.height/2,circleSize-50)) 
     {
         console.log("collision")
         player.x = e.clientX
