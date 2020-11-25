@@ -128,10 +128,14 @@ function Animate() {
     c.fillRect(0,0,canvas.width,canvas.height)
     //c.clearRect(0,0,canvas.width,canvas.height)
     
+    updatedCircle =false
     if(score > 0) {
         if(score % 100 == 0) {
+            if(updatedCircle==false) {
             if(circleSize > 100) {
-            circleSize = circleSize * 0.95
+                updatedCircle=true
+                circleSize = circleSize * 0.95
+            }
             }
         }
     }
