@@ -127,18 +127,7 @@ function Animate() {
     c.fillStyle = 'rgba(0,0,0,0.1)'
     c.fillRect(0,0,canvas.width,canvas.height)
     //c.clearRect(0,0,canvas.width,canvas.height)
-    
-    updatedCircle =false
-    if(score > 0) {
-        if(score % 100 == 0) {
-            if(updatedCircle==false) {
-            if(circleSize > 100) {
-                updatedCircle=true
-                circleSize = circleSize * 0.95
-            }
-            }
-        }
-    }
+    circleSize =(canvas.height/2) * (1 - (Math.floor(score/100) * 0.05))
     gameUI.radius = circleSize
     gameUI.Draw()
     
