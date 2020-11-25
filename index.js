@@ -129,11 +129,11 @@ function Animate() {
     //c.clearRect(0,0,canvas.width,canvas.height)
     
     if(score > 0) {
-    if(score % 100 == 0) {
-        if(circleSize > 100) {
-        circleSize = circleSize * 0.95
+        if(score % 100 == 0) {
+            if(circleSize > 100) {
+            circleSize = circleSize * 0.95
+            }
         }
-    }
     }
     gameUI.radius = circleSize
     gameUI.Draw()
